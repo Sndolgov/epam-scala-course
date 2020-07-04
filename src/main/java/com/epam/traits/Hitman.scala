@@ -3,8 +3,9 @@ package com.epam.traits
 /**
  * @author Evgeny Borisov
  */
-case class Hitman(x: Int) extends Killer {
+case class Hitman(strength: Int) extends Killer {
 
+  val x = 10;
 
   override def resurrect: Nothing = throw new UnsupportedOperationException
 
@@ -13,3 +14,9 @@ case class Hitman(x: Int) extends Killer {
     x * 10
   }
 }
+
+/*object Hitman {
+
+  def apply() = new Hitman(10)
+
+}*/

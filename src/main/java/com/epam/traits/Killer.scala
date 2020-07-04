@@ -11,6 +11,7 @@ trait Killer {
 
 
   def id: Int
+  val strength: Int
 
   def killAll(): Unit = {
     println("стреляет снайпер по номером "+id)
