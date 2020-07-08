@@ -3,13 +3,6 @@ package com.epam.traits
 /**
  * @author Evgeny Borisov
  */
-case class Hitman(x: Int) extends Killer {
-
-
-  override def resurrect: Nothing = throw new UnsupportedOperationException
-
-  override lazy val id: Int = {
-
-    x * 10
-  }
+case class Hitman(id: Int,resurrect:Int) extends Killer {
+  override val name: String = "sdf".toLowerCase()
 }

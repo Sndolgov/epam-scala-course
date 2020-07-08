@@ -8,6 +8,7 @@ trait Killer {
 
   println("some killer was created")
 
+  val name:String
 
 
   def id: Int
@@ -17,6 +18,6 @@ trait Killer {
     println("все убиты")
   }
 
-  def resurrect():Unit
+  def resurrect:Int
 
 }
