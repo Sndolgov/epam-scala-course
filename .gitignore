@@ -1,2 +1,4 @@
 # Project exclude paths
 /target/
+/.idea/
+/epam-scala-course.iml
