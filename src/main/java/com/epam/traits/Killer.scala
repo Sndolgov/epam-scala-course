@@ -3,7 +3,7 @@ package com.epam.traits
 /**
  * @author Evgeny Borisov
  */
-trait Killer {
+trait Killer{
 
 
   println("some killer was created")

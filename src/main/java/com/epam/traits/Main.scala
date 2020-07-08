@@ -13,7 +13,7 @@ object Main {
     val human = mapper.readValue("""{"age":10}""", classOf[Human])
     println(human.getAge)*/
 
-    val hitman = Hitman()
+    val hitman = new Hitman(10)
     println(hitman)
     println(hitman.strength)
   }
