@@ -3,7 +3,7 @@ package com.epam.traits
 /**
  * @author Evgeny Borisov
  */
-trait Killer {
+trait Killer{
 
 
   println("some killer was created")
@@ -12,6 +12,7 @@ trait Killer {
 
 
   def id: Int
+  val strength: Int
 
   def killAll(): Unit = {
     println("стреляет снайпер по номером "+id)
