@@ -14,6 +14,12 @@ object MainQuoters {
 
     //todo public printSortedFriday13(int startYear, int endYear) build and sort maps which will look like:[(1912:3),(1916,3)/...]
 
+    //todo We have and Employee with only salary property
+    // and you have and Enum Seniority which explains what range of salary is Junior, Middle, etc
+    // write function which will recieve list of employees and return multimap Map<Seniority,List<Employee>
+    // write function which will recieve list of employees and return map Map<Seniority,Integer>   - how much employees with such seniority
+    // write function which will recieve list of employees and return map Map<Seniority,Integer>   - max salari for this seniority
+
     strings = "groovy"::"kotlin" :: strings
     println(strings)
     //    var foo = 10
