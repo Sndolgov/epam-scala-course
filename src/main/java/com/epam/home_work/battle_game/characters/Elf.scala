@@ -1,5 +1,7 @@
 package com.epam.home_work.battle_game.characters
 
+import com.epam.home_work.battle_game.characters.prototype.Hero
+
 class Elf() extends Hero {
   override var power: Int = 10
   override var hp: Int = 10

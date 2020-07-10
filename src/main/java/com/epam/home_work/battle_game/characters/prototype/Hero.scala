@@ -1,4 +1,4 @@
-package com.epam.home_work.battle_game.characters
+package com.epam.home_work.battle_game.characters.prototype
 
 trait Hero {
   var power: Int

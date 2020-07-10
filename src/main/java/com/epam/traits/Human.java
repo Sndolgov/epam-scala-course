@@ -23,10 +23,11 @@ public class Human implements Killer{
     }
 
     @Override
-    public void resurrect()
+    public int resurrect()
     {
-
+        return 0;
     }
+
 
     @Override
     public int id()
@@ -35,8 +36,8 @@ public class Human implements Killer{
     }
 
     @Override
-    public int strength()
+    public String name()
     {
-        return 0;
+        return "Name";
     }
 }
