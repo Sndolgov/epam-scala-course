@@ -11,6 +11,7 @@ trait Quoter {
 }
 
 
+
 case class MessageQuoter(message: String) extends Quoter {
   override def sayMessage(): Unit = println(message)
 }
