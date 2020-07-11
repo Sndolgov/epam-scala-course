@@ -1,4 +1,4 @@
-package com.epam.home_work
+package com.epam.home_work.streams
 
 /**
  * @author Evgeny Borisov
@@ -15,7 +15,7 @@ object CountPopularWordsMain {
 
 
     str.split(" ").
-      groupBy(x => x).
+      groupBy(identity).
       map((entry) => (entry._1, entry._2.length)).
       toList.
       sortWith((ent1, ent2) => ent1._2 > ent2._2).
