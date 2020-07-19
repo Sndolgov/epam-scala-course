@@ -2,7 +2,12 @@ package com.epam.home_work.streams.employees;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.SneakyThrows;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -50,12 +55,23 @@ public class EmployeeJava
     public static List<Company> companies = List.of(new Company(employees),new Company(employees),new Company(employees));
 
 
+    @SneakyThrows
     public static void main(String[] args)
     {
-        System.out.println("salaryAmount: " + salaryAmount(employees));
-        System.out.println("yearSalaryAmount: " + yearSalaryAmount(employees));
-        System.out.println("sortBySalary: " + sortBySalary(employees));
-        System.out.println("sortByCategory: " + sortByCategory(companies));
+//        Path file = Files.createFile(Path.of("/Users/sergeydolgov/Downloads/employees"));
+        String path = "/Users/sergeydolgov/Downloads/employees";
+        ObjectOutputStream oos =  new ObjectOutputStream (new FileOutputStream(path));
+        oos.writeObject(employees);
+        oos.close();
+
+
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
+        List<Employee> result = (List<Employee>) ois.readObject();
+        System.out.println(result);
+//        System.out.println("salaryAmount: " + salaryAmount(employees));
+//        System.out.println("yearSalaryAmount: " + yearSalaryAmount(employees));
+//        System.out.println("sortBySalary: " + sortBySalary(employees));
+//        System.out.println("sortByCategory: " + sortByCategory(companies));
     }
 
 

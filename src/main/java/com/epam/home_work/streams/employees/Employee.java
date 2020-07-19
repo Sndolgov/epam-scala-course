@@ -5,11 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @AllArgsConstructor
 @ToString(exclude = "yearSalary")
-public class Employee
+public class Employee implements Serializable
 {
     private String name;
     private int salary;
